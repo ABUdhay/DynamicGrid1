@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dynamic grid</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="grid.css" />
+</head>
+
+<body>
+    <div class="grid"></div>
+<script src="grid.js"></script>
+<script>
+    var options = {
+        customClass: 'my-grid-blue',
+        rows: [{
+          columnKey: 0,
+          columnName: 'name',
+          value: ['udhay', 'kumar', 'ab']
+        }, {
+          columnKey: 1,
+          columnName: 'age',
+          value: [20, 27, 22]
+        }, {
+          columnKey: 2,
+          columnName: 'dob',
+          value: ['1/1/1991', '1/2/1992', '11/11/1991']
+        }],
+        columns: [{
+            key: 0,
+            value: 'name',
+            show: true
+        }, {
+            key: 1,
+            value: 'age',
+            show: true
+        }, {
+            key: 2,
+            value: 'dob',
+            show: true
+        }]
+    }
+
+    
+    var grid1 = new DynamicGrid(document.querySelector('.grid'), options);
+    //to swap order by columnkey
+    grid1.rearrangeColumn(0, 2);
+</script>
+</body>
+
+</html>

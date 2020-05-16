@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.grid-body {
+    display: flex;
+}
+.grid-row,
+.grid-header {
+  line-height:1em;
+  display: flex;
+  flex-direction: row;
+  width: auto;
+}
+
+.grid-header {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.grid-row {
+    flex-direction: column;
+    width: 20%;
+}
+
+.grid-cell,
+.header-cell{
+  width: 20%;
+  padding: 10px;
+  box-sizing:border-box;
+  border:1px solid lightgrey;
+}
+.grid-cell {
+    width: auto;
+}
+.container {
+  min-width: 1200px;
+}
